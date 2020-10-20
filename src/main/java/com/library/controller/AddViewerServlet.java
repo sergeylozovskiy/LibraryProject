@@ -20,6 +20,7 @@ public class AddViewerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
+
             String login = req.getParameter("login");
             String password = req.getParameter("password");
             String surnameRu = req.getParameter("surnameRu");
