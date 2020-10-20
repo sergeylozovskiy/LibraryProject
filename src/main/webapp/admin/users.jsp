@@ -58,7 +58,7 @@
         <div class="form" style="margin: 0 auto;">
             <form action="/admin/searchUser" method="post">
                 <div class="form-row" style="margin-bottom: 24px">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-8">
                         <input type="text" name="login" title="" placeholder="<fmt:message key="login"/>"/>
 
                         <select name="role" title="">
