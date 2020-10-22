@@ -116,11 +116,11 @@
                 <div class="col-lg-3 col-md-6 footer-contact">
                     <h4>Contact Us</h4>
                     <p>
-                        A108 Adam Street <br>
-                        New York, NY 535022<br>
-                        United States <br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                        Novoorlovska 2 Street <br>
+                        Dnipro, DP 49000<br>
+                        Ukraine <br>
+                        <strong>Phone:</strong> +3 8096 418 5431<br>
+                        <strong>Email:</strong> sergeylozovskiy@gmail.com<br>
                     </p>
 
                     <div class="social-links">
