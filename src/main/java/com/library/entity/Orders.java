@@ -18,6 +18,17 @@ public class Orders {
     private Date dateTo;
     private Double penalty;
 
+    public int getCountOrds() {
+        return countOrds;
+    }
+
+    public void setCountOrds(int countOrds) {
+        this.countOrds = countOrds;
+    }
+
+    private int countOrds;
+
+
     public Orders() {
     }
 
@@ -140,6 +151,7 @@ public class Orders {
     }
 
     public String getStatusString() {
+     //   status.toString();
         switch (status) {
             case CREATED:
                 return "CREATED";
@@ -150,6 +162,11 @@ public class Orders {
             default:
                 return "RETURNED";
         }
+    }
+
+    public String count(){
+
+        return null;
     }
 
     public String getPenaltyString() {

@@ -1,6 +1,12 @@
 <%@ page import="com.library.entity.User" %>
+<%@ page import="com.library.service.OrdersService" %>
+<%@ page import="com.library.entity.Orders" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.library.entity.Orders" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="com.library.util.DatabaseFunctions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -11,6 +17,7 @@
 <%
     List users = (List) session.getAttribute("users");
     String lang = request.getParameter("lang");
+
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,8 +103,12 @@
             <%
                 Iterator it = users.iterator();
                 int n = 1;
+//                Connection connection = DatabaseFunctions.getConnection();
+//                Statement statement = connection.createStatement();
+//                OrdersService ordersService = new OrdersService((Connection) statement);
                 while (it.hasNext()) {
                     User user = (User) it.next();
+         //           ordersService = (OrdersService) it.next();
             %>
             <div class="form-row">
                 <div class="form-group col-md-1">
@@ -133,6 +144,10 @@
                         <input type="hidden" value="<%=user.getId()%>" name="id"/>
                         <input type="submit" value="<fmt:message key="delete"/>" class="btn-red"/>
                     </form>
+                </div>
+                <div class="form-group col-md-2">
+<%--                    <p><fmt:message key="<%=ordersService.getCountOrdersById(user.getId())%>=%>"/>--%>
+                    </p>
                 </div>
             </div>
             <%

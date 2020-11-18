@@ -105,4 +105,18 @@ public class DatabaseFunctions {
             return null;
         }
     }
+    public static ResultSet selectCountOrders(String table, String fields, String condition, Statement state) {
+        try {
+            StringBuilder sql = new StringBuilder();
+            sql.append("SELECT ").append(fields);
+            sql.append(" FROM ").append(table);
+            if (condition != null) {
+                sql.append(" WHERE ").append(condition);
+            }
+            return state.executeQuery(String.valueOf(sql));
+        } catch (Exception e) {
+            log.error(e.getLocalizedMessage());
+            return null;
+        }
+    }
 }

@@ -166,4 +166,22 @@ public class OrdersService {
         }
     }
 
+
+//    public int getCountOrdersById(int id) {
+//        Orders orders = null;
+//        ResultSet count = null;
+//        try {
+//            Statement statement = connection.createStatement();
+//            ResultSet rs = DatabaseFunctions.selectCountOrders("orders", "count(*)", "id = " + id, statement);
+//            orders.getCountOrds() = rs.;
+//            statement.close();
+//            rs.close();
+//        } catch (Exception e) {
+//            log.error(e.getLocalizedMessage());
+//        }
+//        return orders.getCountOrds();
+//    }
+
+
+
 }

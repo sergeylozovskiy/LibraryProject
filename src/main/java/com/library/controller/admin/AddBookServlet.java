@@ -76,9 +76,9 @@ public class AddBookServlet extends HttpServlet {
             String result = bookService.addBook(book);
             if (result.equals("Success")) {
                 req.getSession().setAttribute("books", bookService.findAllBooks());
-                PrintWriter printWriter = resp.getWriter();
+                //PrintWriter printWriter = resp.getWriter();
                 resp.sendRedirect("books.jsp");
-                printWriter.close();
+                //printWriter.close();
             } else {
                 PrintWriter printWriter = resp.getWriter();
                 resp.sendRedirect("error.jsp?message=" + result);

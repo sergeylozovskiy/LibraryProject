@@ -21,7 +21,7 @@ public class GetOrderServletLibrarian extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
             String id = req.getParameter("id");
-            Connection connection = DatabaseFunctions.getConnection();
+            final Connection connection = DatabaseFunctions.getConnection();
             OrdersService ordersService = new OrdersService(connection);
             req.getSession().setAttribute("order", ordersService.getOrdersById(Integer.parseInt(id)));
             PrintWriter printWriter = resp.getWriter();

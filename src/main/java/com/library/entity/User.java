@@ -123,7 +123,7 @@ public class User {
                 return "VIEWER";
         }
     }
-
+////////////////////////////*********************
     public String getActiveString() {
         if (active) return "true";
         else return "false";
